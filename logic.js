@@ -20,6 +20,20 @@ downBtn.addEventListener('click', () => {
     changeSlide('down');
 });
 
+document.addEventListener('keyup', (event) => {
+    // console.log event.key and press arrows or anything on keyboard to check how actions named
+
+    if(event.key === 'ArrowUp') {
+        changeSlide('up')
+    } else if(event.key === 'ArrowDown') {
+        changeSlide('down')
+    } else if(event.key === 'ArrowRight') {
+        changeSlide('up');
+    } else if(event.key === 'ArrowLeft') {
+        changeSlide('down')
+    }
+})
+
 
 function changeSlide(direction) {
     if (direction === 'up') {
