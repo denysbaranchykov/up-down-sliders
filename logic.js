@@ -23,17 +23,16 @@ downBtn.addEventListener('click', () => {
 document.addEventListener('keyup', (event) => {
     // console.log event.key and press arrows or anything on keyboard to check how actions named
 
-    if(event.key === 'ArrowUp') {
+    if (event.key === 'ArrowUp') {
         changeSlide('up')
-    } else if(event.key === 'ArrowDown') {
+    } else if (event.key === 'ArrowDown') {
         changeSlide('down')
-    } else if(event.key === 'ArrowRight') {
+    } else if (event.key === 'ArrowRight') {
         changeSlide('up');
-    } else if(event.key === 'ArrowLeft') {
+    } else if (event.key === 'ArrowLeft') {
         changeSlide('down')
     }
 })
-
 
 function changeSlide(direction) {
     if (direction === 'up') {
@@ -50,7 +49,6 @@ function changeSlide(direction) {
 
     const height = container.clientHeight;
 
-    mainSlide.style.transform = `translateY(-${height * activeSlidesIndex}px)`
-    sidebar.style.transform = `translateY(${height * activeSlidesIndex}px)`
-
+    mainSlide.style.transform = `translateY(-${height * activeSlidesIndex}px)`;
+    sidebar.style.transform = `translateY(${height * activeSlidesIndex}px)`;
 }
